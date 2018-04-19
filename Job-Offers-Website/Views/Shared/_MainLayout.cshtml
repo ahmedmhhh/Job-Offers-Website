@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width-device-width scale=1"
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+</head>
+<body>
+        <!--Navbar-->    
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+               
+                <button  class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+              
+            </div>
+            <div class="collapse navbar-collapse" id="navbar" >
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-user"></i>
+                            login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-lock"></i>
+                            Register
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            Contact as
+                            <i class="glyphicon glyphicon-envelope"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            About
+                            <i class="glyphicon glyphicon-info-sign"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Offers
+                            <i class="glyphicon glyphicon-folder-open"></i>                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Home
+                            <i class="glyphicon glyphicon-home"></i>                          
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="navbar-brand">
+                            <img src="~/Content/logo.PNG" width="25px"/>
+                        </a>
+                    </li>
+                </ul>
+
+              
+            </div>
+        </div>
+       
+    </nav>
+        @RenderBody()
+
+
+        <!--Footer-->
+   <footer class="navbar navbar-fixed-bottom myfooter">
+       <div class="container">
+           <div class="row">
+
+               <div class="col-md-4">
+                   <h3>
+                       <i class="glyphicon glyphicon-envelope"></i>
+                      Contact as
+                   </h3>
+                   <ul>
+                       <li><a href="#">facebook</a></li>
+                       <li><a href="#">twitter</a></li>
+                       <li><a href="#">youtube</a></li>
+                       <li><a href="#">email</a></li>
+                   </ul>
+               </div>
+               <div class="col-md-4">
+                   <h3>
+                       <i class="glyphicon glyphicon-globe"></i>
+                       Important links
+                   </h3>
+                   <ul>
+                       <li><a href="#">Multinational Company</a></li>
+                       <li><a href="#">local Company</a></li>
+                       <li><a href="#">national Company</a></li>
+                       <li><a href="#">other Company</a></li>
+                   </ul>
+               </div>
+               <div class="col-md-4">
+                   <h3>
+                       <i class="glyphicon glyphicon-question-sign"></i>
+                       About as
+                   </h3>
+                   <p>
+                       A skilled java developer ready to work on Android and Java projects. A result oriented professional who can work in a fast paced work environment and able to deliver on time and with quality
+                   </p>
+               </div>
+           </div>
+           
+       </div>
+       <div class="subfooter">
+           <span> All Rights saved 2018</span>
+       </div>
+   </footer>
+
+
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Content/bootstrap.min.js"></script>
+    
+</body>
+</html>
