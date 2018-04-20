@@ -1,14 +1,20 @@
 ﻿.navbar-default {
     background-color : #0c5c82;
     border-color : #e7e7e7;
+    
 }
 
 .navbar-default .navbar-nav>li>a{
     color:#e7e7e7;
+    font-family:Courier;
+    font-size:small;
+    font-weight:bold;
+    padding:15px;
+    
 }
 
 .navbar-default .navbar-nav>li>a:hover{
-    color:#fff;
+    color:azure;
 }
 .nav>li{
     position:relative;
@@ -17,29 +23,40 @@
     padding-top:5px;
 }
 .myfooter{
+    margin-bottom:-20px;
     background-color:cornflowerblue;
-    padding:10px;
-    text-align:justify
+    text-align:justify;
+    bottom:0;
+    
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
 }
+
 .subfooter {
     background-color:#0c5c82;
     color:white;
     padding:10px;
     text-align:center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:Calibri
 }
 
 .subfooter span{
    color:azure
 }
+.login_Register{
+    margin-left:500px;
+}
 
 .myfooter li{
-    text-align:left
+    
 }
 .myfooter a{
     color:azure;
     text-align:left;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:Calibri
 }
 .myfooter h3,ul,p{
     list-style-type:none;
@@ -47,5 +64,20 @@
     text-align:left;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
-
-
+.logo-size{
+    margin-left:60px;
+   padding-right:25px;
+   margin-bottom:-25px; 
+   width:125px
+}
+html {
+  height: 100%;
+}
+body{
+   
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+    margin-top:50px;
+    padding-bottom: 6rem;
+}

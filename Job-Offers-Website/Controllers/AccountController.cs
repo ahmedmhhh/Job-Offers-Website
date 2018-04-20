@@ -139,6 +139,7 @@ namespace WebApplication1.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            ViewBag.UserType = new SelectList(new[] { "Searching for jobs", "Looking to Adverise jobs" });
             return View();
         }
 
@@ -151,7 +152,8 @@ namespace WebApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                ViewBag.UserType = new SelectList(new[] { "Searching for jobs", "Looking to Adverise jobs" });
+                var user = new ApplicationUser { UserName = model.username, Email = model.Email,UserType=model.UserType };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
 
 <html>
-<head>
+
+<head >
     <meta name="viewport" content="width-device-width scale=1"
     <title>@ViewBag.Title</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -22,69 +23,72 @@
               
             </div>
             <div class="collapse navbar-collapse" id="navbar" >
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-user"></i>
-                            login
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-lock"></i>
-                            Register
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">
-                            Contact as
-                            <i class="glyphicon glyphicon-envelope"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            About
-                            <i class="glyphicon glyphicon-info-sign"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Offers
-                            <i class="glyphicon glyphicon-folder-open"></i>                            
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Home
-                            <i class="glyphicon glyphicon-home"></i>                          
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="navbar-brand">
-                            <img src="~/Content/logo.PNG" width="25px"/>
-                        </a>
-                    </li>
-                </ul>
-
               
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <img src="~/images/jobcom-logo.png" class="logo-size"/>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-home"></i>
+                            Home       
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-folder-open"></i>
+                            Offers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-info-sign"></i>
+                            About                           
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            Contact as                       
+                        </a>
+                    </li>
+                   
+                </ul>
+                <!--ParLogin-->
+                @Html.Partial("_Login")
+
             </div>
         </div>
        
     </nav>
-        @RenderBody()
+
+    <div class="container">
+        <div class="row">
+            @RenderBody()
+        </div>
+    </div>
+       
 
 
         <!--Footer-->
-   <footer class="navbar navbar-fixed-bottom myfooter">
+   <footer class="myfooter">
        <div class="container">
            <div class="row">
 
                <div class="col-md-4">
                    <h3>
+                       <i class="glyphicon glyphicon-question-sign"></i>
+                       About Us
+                   </h3>
+                   <p>
+                       A skilled java developer ready to work on Android and Java projects. A result oriented professional who can work in a fast paced work environment and able to deliver on time and with quality
+                   </p>
+               </div>
+               <div class="col-md-4">
+                   <h3>
                        <i class="glyphicon glyphicon-envelope"></i>
-                      Contact as
+                       Contact Us
                    </h3>
                    <ul>
                        <li><a href="#">facebook</a></li>
@@ -96,7 +100,7 @@
                <div class="col-md-4">
                    <h3>
                        <i class="glyphicon glyphicon-globe"></i>
-                       Important links
+                       Important Links
                    </h3>
                    <ul>
                        <li><a href="#">Multinational Company</a></li>
@@ -104,15 +108,8 @@
                        <li><a href="#">national Company</a></li>
                        <li><a href="#">other Company</a></li>
                    </ul>
-               </div>
-               <div class="col-md-4">
-                   <h3>
-                       <i class="glyphicon glyphicon-question-sign"></i>
-                       About as
-                   </h3>
-                   <p>
-                       A skilled java developer ready to work on Android and Java projects. A result oriented professional who can work in a fast paced work environment and able to deliver on time and with quality
-                   </p>
+                  
+                   
                </div>
            </div>
            
