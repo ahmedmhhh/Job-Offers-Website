@@ -21,7 +21,7 @@
                         <img src="~/uploads/@subitem.jobImage" style="width:200px;height:200px;" />
                         <h3>@Html.DisplayFor(modelItem => subitem.jobTitle)</h3>
                         <h5>@Html.DisplayFor(modelItem => subitem.jobContent)</h5>
-                        <button class="btn bnt-default">Details</button>
+                        @Html.ActionLink("Details", "Details", new { jobId = subitem.id },new {@class ="btn btn-primary" }) 
                     </div>
 
 

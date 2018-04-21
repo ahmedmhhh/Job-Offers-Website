@@ -1,14 +1,14 @@
 ﻿@model Job_Offers_Website.Models.Job
 
 @{
-   
+    
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Details of Job</h2>
 
 <div>
-    <h4>Job</h4>
+   
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -40,13 +40,13 @@
         </dt>
 
         <dd>
-            <img src="~/uploads/@Html.DisplayFor(Model=>Model.jobImage)" 
-                 class="thumbnail" style="width:48px; height:48px"/>
+            <img src="~/uploads/@Html.DisplayFor(Model=>Model.jobImage)"
+                 class="thumbnail" style="width:128px; height:128px"/>
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Apply this job", "Apply", new { id = Model.id }, new {@class="btn btn-success" }) |
+    @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-default" })
 </p>
