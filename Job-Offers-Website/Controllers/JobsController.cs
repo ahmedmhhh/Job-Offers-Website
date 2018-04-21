@@ -11,6 +11,7 @@ using WebApplication1.Models;
 using System.IO;
 namespace Job_Offers_Website.Controllers
 {
+    [Authorize]
     public class JobsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -91,9 +92,14 @@ namespace Job_Offers_Website.Controllers
         {
             if (ModelState.IsValid)
             {
-                string path = Path.Combine(Server.MapPath("~/uploads"), upload.FileName);
-                upload.SaveAs(path);
-                job.jobImage = upload.FileName;
+                string oldpath = Path.Combine(Server.MapPath("~/uploads"), job.jobImage);
+                if (upload != null)
+                {
+                    System.IO.File.Delete(oldpath);
+                    string path = Path.Combine(Server.MapPath("~/uploads"), upload.FileName);
+                    upload.SaveAs(path);
+                    job.jobImage = upload.FileName;
+                }
                 db.Entry(job).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

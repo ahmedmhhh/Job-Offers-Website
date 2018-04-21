@@ -1,31 +1,32 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model IEnumerable<Job_Offers_Website.Models.Category>
+@{
+
 }
+<div style="margin-bottom:250px">
+    <div class="jumbotron">
+        <h2>Welcome To Job Website</h2>
+        <p class="lead">If you are searching for a new career opportunity, you can search open vacancies and jobs. You can also signup here to be alerted of new jobs by email. </p>
+        <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    </div>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    @foreach (var item in Model)
+    {
+        <div class="panel panel-default" style="padding:15px; margin-bottom:10px;">
+            <h1 class="panel-heading">@Html.DisplayFor(modelItem => item.categoryName)</h1>
+            <h5>@Html.DisplayFor(modelItem => item.categoryDescription)</h5>
+            <div class="row">
+                @foreach (var subitem in item.Job)
+                {
+                    <div class="col-md-3 thumbnail" style="margin-left:20px;margin-bottom:-10px;height:350px;">
+                        <img src="~/uploads/@subitem.jobImage" style="width:200px;height:200px;" />
+                        <h3>@Html.DisplayFor(modelItem => subitem.jobTitle)</h3>
+                        <h5>@Html.DisplayFor(modelItem => subitem.jobContent)</h5>
+                        <button class="btn bnt-default">Details</button>
+                    </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+
+                }
+            </div>
+        </div>
+    }
 </div>

@@ -58,3 +58,16 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+@section scripts{
+    <script>
+    $(function () {
+        $("#save").click(function () {
+            if($("#jobimg").val=""){
+                $("#error-div").fadeIn();
+                $("#view-error").append("please upload image for this job");
+                return false;
+            }
+        });
+    });
+    </script>
+}
