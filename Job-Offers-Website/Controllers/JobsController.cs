@@ -9,6 +9,8 @@ using System.Web.Mvc;
 using Job_Offers_Website.Models;
 using WebApplication1.Models;
 using System.IO;
+using Microsoft.AspNet.Identity;
+
 namespace Job_Offers_Website.Controllers
 {
     [Authorize]
@@ -57,6 +59,7 @@ namespace Job_Offers_Website.Controllers
                 string path = Path.Combine(Server.MapPath("~/uploads"), upload.FileName);
                 upload.SaveAs(path);
                 job.jobImage = upload.FileName;
+                job.UserId = User.Identity.GetUserId();
                 db.Jobs.Add(job);
                 db.SaveChanges();
                 return RedirectToAction("Index");

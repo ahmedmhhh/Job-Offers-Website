@@ -34,12 +34,7 @@
                             Home       
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-folder-open"></i>
-                            Offers
-                        </a>
-                    </li>
+                  
                     <li>
                         <a href="#">
                             <i class="glyphicon glyphicon-info-sign"></i>
@@ -53,7 +48,12 @@
                             Contact as                       
                         </a>
                     </li>
-                   
+                    <li>
+                      @using (Html.BeginForm("Search","Home",FormMethod.Post))
+                      {
+                            <input id="searchName" name="searchname" type="text" placeholder="Search Here !"/>
+                      }
+                    </li>
                 </ul>
                 <!--ParLogin-->
                 @Html.Partial("_Login")

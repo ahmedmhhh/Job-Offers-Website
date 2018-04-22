@@ -10,7 +10,6 @@
     font-size:small;
     font-weight:bold;
     padding:15px;
-    
 }
 
 .navbar-default .navbar-nav>li>a:hover{
@@ -20,7 +19,7 @@
     position:relative;
     display:block;
     height : 60px;
-    padding-top:5px;
+    padding-top:5px; 
 }
 .myfooter{
     margin-bottom:-20px;
@@ -47,7 +46,7 @@
    color:azure
 }
 .login_Register{
-    margin-left:500px;
+   float:right;
 }
 
 .myfooter li{
@@ -78,4 +77,22 @@ body{
     position: relative;
     margin: 0;
     margin-top:70px;
+}
+#searchName {  
+    margin-top:8px;
+    padding:5px;
+    width: 230px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    background-position:right;
+    background-image: url('../images/search.png');
+    background-repeat:no-repeat;
+    transition:width 0.4s ease-in-out;
+}
+#searchName:focus{
+    width:180%
+}
+.img-size{
+    font-size:20px;
 }

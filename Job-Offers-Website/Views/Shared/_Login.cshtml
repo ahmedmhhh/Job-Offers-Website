@@ -1,18 +1,70 @@
 ﻿
 @using Microsoft.AspNet.Identity
+@using WebApplication1.Models
 
 @if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoff" }))
     {
+        var db = new ApplicationDbContext();
+        var UserId = User.Identity.GetUserId();
+        var CurrentUser = db.Users.Where(a => a.Id == UserId).SingleOrDefault();
         @Html.AntiForgeryToken()
-        <ul class="nav navbar-nav login_Register">
-            <li>
-                @Html.ActionLink("Welcome " + User.Identity.GetUserName(), "Index", "Manage")
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-user"></span>
+                        <strong>Welcome @CurrentUser.UserName</strong>
+                        <span class="glyphicon glyphicon-chevron-down"></span>      
+                </a> 
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="navbar-user">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <p class="text-center">
+                                        <span class="glyphicon glyphicon-user img-size"></span>
+                                    </p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <p class="text-right">
+                                        <strong>
+                                            @CurrentUser.UserName
+                                        </strong>
+                                    </p>
+                                    @if (CurrentUser.UserType == "User")
+                                    {
+                                        <a href="#" class="btn btn-success">Your Jobs</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="#" class="btn btn-success btn-block">Your Appled Jobs</a>
+                                    }
+                                    <a href="~/Account/EditProfile" class="btn btn-primary btn-block">Edit Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p><a href="javascript:document.getElementById('logoff').submit()" class="btn btn-danger btn-block">LogOff</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </li>
-            <li>
-                <a href="javascript:document.getElementById('logoff').submit()">LogOff</a>
-            </li>
+
+    
+           @* <li>
+        @Html.ActionLink("Welcome " + User.Identity.GetUserName(), "Index", "Manage")
+    </li>
+    <li>
+        <a href="javascript:document.getElementById('logoff').submit()">LogOff</a>
+    </li>*@
         </ul>
     }
 }

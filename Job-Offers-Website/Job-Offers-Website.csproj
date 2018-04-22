@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -191,6 +192,7 @@
     <Content Include="fonts\index.html" />
     <Content Include="Global.asax" />
     <Content Include="images\jobcom-logo.png" />
+    <Content Include="images\search.png" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Web.config" />
@@ -233,12 +235,17 @@
     <Compile Include="Migrations\201804211820372_applyJobs.Designer.cs">
       <DependentUpon>201804211820372_applyJobs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804220845083_EditJobModel.cs" />
+    <Compile Include="Migrations\201804220845083_EditJobModel.Designer.cs">
+      <DependentUpon>201804220845083_EditJobModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplyForJob.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\JobsViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -318,6 +325,14 @@
     <Content Include="Views\Roles\Delete.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
     <Content Include="Views\Home\Apply.cshtml" />
+    <Content Include="Views\Home\GetJobsByUser.cshtml" />
+    <Content Include="Views\Home\DetailsOfJob.cshtml" />
+    <None Include="Properties\PublishProfiles\JobWebSite.pubxml" />
+    <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\Delete.cshtml" />
+    <Content Include="Views\Home\GetJobsByPublisher.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
+    <Content Include="Views\Account\EditProfile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -345,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804211820372_applyJobs.resx">
       <DependentUpon>201804211820372_applyJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804220845083_EditJobModel.resx">
+      <DependentUpon>201804220845083_EditJobModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
