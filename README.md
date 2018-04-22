@@ -19,7 +19,7 @@
 </hr>
 <img src="https://user-images.githubusercontent.com/16438786/39098001-70d3c4b2-4664-11e8-8003-6232ad5798d5.png" width=500 ; height=300/>
 
-<h3>Manage USer Page<h3>
+<h3>Manage User Page<h3>
 </hr>
 <img src="https://user-images.githubusercontent.com/16438786/39098010-89988974-4664-11e8-83c3-031728f3b6a6.png" width=500 ; height=300/>
 
