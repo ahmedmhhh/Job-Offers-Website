@@ -27,3 +27,6 @@
 </hr>
 <img src="https://user-images.githubusercontent.com/16438786/39099168-eec281e0-4675-11e8-8326-50ae55c02785.png" width=600 ; height=300/>
 
+<h3>Send Email from Contact</h3>
+</hr>
+<img src="https://user-images.githubusercontent.com/16438786/39121180-1ccbfbe0-46f1-11e8-9906-db4a0f638207.png" width=600 ; height=300/>
