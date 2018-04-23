@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using WebApplication1.Models;
 
 namespace Job_Offers_Website.Models
@@ -13,6 +14,7 @@ namespace Job_Offers_Website.Models
         [Display(Name ="Job Name")]
         public string jobTitle { get; set; }
         [Display(Name = "Job Description")]
+        [AllowHtml]
         public string jobContent { get; set; }
         [Display(Name = "Job Image")]
         public string jobImage { get; set; }
