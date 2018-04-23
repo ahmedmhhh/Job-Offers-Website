@@ -1,4 +1,11 @@
 # Job-Offers-Website
+
+
+<h3>Home Page</h3>
+</hr>
+<img src="https://user-images.githubusercontent.com/16438786/39121837-252e6550-46f3-11e8-9c73-3c0dad8db7dc.png" width=600 ; height=300/>
+
+
 <h3>Register Page<h3>
 </hr>
 <img src="https://user-images.githubusercontent.com/16438786/39097964-dd5d0072-4663-11e8-9e41-2edb08b35cbf.png" width=600 ; height=300/>
