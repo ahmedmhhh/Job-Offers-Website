@@ -243,7 +243,6 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplyForJob.cs" />
     <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\ContactModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Job.cs" />
     <Compile Include="Models\JobsViewModel.cs" />
@@ -344,7 +343,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\fonts\" />
-    <Folder Include="Scripts\ckeditor\" />
     <Folder Include="uploads\" />
   </ItemGroup>
   <ItemGroup>
